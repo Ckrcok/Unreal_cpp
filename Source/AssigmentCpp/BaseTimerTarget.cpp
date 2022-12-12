@@ -28,6 +28,7 @@ void ABaseTimerTarget::BeginPlay()
 {
 	Super::BeginPlay();
 
+	Sphere->OnComponentBeginOverlap.AddDynamic(this, &ABaseTimerTarget::OnBeginOverlap);
 }
 
 // Called every frame

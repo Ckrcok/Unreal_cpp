@@ -13,6 +13,41 @@ class AAssigmentCppGameMode : public AGameModeBase
 
 public:
 	AAssigmentCppGameMode();
+
+	virtual void BeginPlay() override;
+	virtual void Tick(float DeltaTime) override;
+
+	UPROPERTY(EditDefaultsOnly, Category = "Rules");
+	int TargetsDestroyed;
+
+
+	UPROPERTY(EditDefaultsOnly, Category = "Rules");
+	int WinningNumber;
+
+	UPROPERTY(EditDefaultsOnly, Category = "Rules");
+	float TimerTime;
+
+	UPROPERTY(EditDefaultsOnly, Category = "Rules");
+	float ArbitraryNumToAdd;
+
+	UPROPERTY(EditDefaultsOnly, Category = "Rules");
+	FTimerHandle Timerhandle;
+
+	UPROPERTY(EditDefaultsOnly, Category = "Rules");
+	FString	TimeReminning;
+
+	TArray <class AActor*> Targets;
+
+	UFUNCTION()
+		void loseGame();
+
+
+	UFUNCTION()
+		void AddTime();
+
+	UFUNCTION()
+		void CheckWin();
+
 };
 
 

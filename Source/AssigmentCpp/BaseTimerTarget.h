@@ -8,7 +8,7 @@
 
 DECLARE_DYNAMIC_MULTICAST_DELEGATE(FTargetDestroyed);
 
-UCLASS()
+UCLASS(Blueprintable)
 class ASSIGMENTCPP_API ABaseTimerTarget : public AActor
 {
 	GENERATED_BODY()
